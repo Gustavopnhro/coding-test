@@ -2,4 +2,6 @@
 #output: True
 
 word = "racecar"
-print(word[::-1] == word)
+while True:
+    print(word[::-1] == word)
+    word  = input(str("Insert your word: \n"))
