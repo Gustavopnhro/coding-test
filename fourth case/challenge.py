@@ -3,12 +3,15 @@
 
 
 
-phrase = "hello. how are you? i'm fine, thank you."
-words = phrase.split(' ')
+phrase = "hello. how are you? i'm fine, thank you.".capitalize()
 
-for i, word in enumerate(words):
-    if words[i][::-1][0] in ['.', '?', '!']:
-        print('achei')
+char = ['?', '.', '!']
 
-
-print (words[0][::-1][0])
+while True:
+    words = phrase.split(' ')
+    for i, word in enumerate(words):
+        if word[::-1][0] in char and i < len(words)-1:
+            words[i+1] = words[i+1].capitalize()
+    
+    print(' '.join(words))
+    phrase = input(str("Insert your phrase: \n")).capitalize()
